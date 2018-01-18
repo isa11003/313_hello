@@ -72,6 +72,7 @@ html[xmlns] .slides { display: block; }
 	text-align: center;
 	min-width: 150px;
 	max-width: 960px;
+	display: block;
 }
 
 .flexslider .slides { zoom: 1; }
@@ -106,7 +107,7 @@ html[xmlns] .slides { display: block; }
 	height: 13px;
 	top: 11px;
 	left: 11px;
-	background: url(../img/arrows.png) no-repeat;
+	background: url(arrows.png) no-repeat;
 }
 
 .flex-direction-nav a:after {

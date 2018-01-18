@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="sliderStyle.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 		<script src="jquery.flexslider-min.js"></script>
+		<script src="normalJs.js"></script>
 		
 	</head>
 	<body>
@@ -15,7 +16,7 @@
 			<div id="content" class="rounded">
 				<br />
 				<br />
-				<div class="flex-container">
+				<div class="flex-container" id="slider">
 					<div class="flexslider">
 						<ul class="slides">
 							<li>
@@ -41,9 +42,13 @@
 						</ul>
 					</div>
 				</div>
+				<div id="gifContainer">
+					<img src="ufoDeer.gif" />
+				</div>
 				<br />
 				<br />
 				<br />
+				<p onmouseover="startGif()" class="small">Hover over me</p>
 			</div>
 		
 			<div id="footer" class="rounded">
