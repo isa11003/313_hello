@@ -12,6 +12,7 @@ body{
 }
 
 #header{
+	padding: 10px;
 	background-color: #cd235a;
 	height: 120px;
 	margin: 10px;
@@ -41,6 +42,7 @@ body{
 }
 
 #footer{
+	padding: 30px;
 	height: 120px;
 	background-color: #479863;
 	margin: 10px;
@@ -54,7 +56,9 @@ body{
 }
 
 button{
-	background-color: #adf3cc;
-	border-color: none;
-	border-radius: 10px;
+	border-style: ridge;
+	background-color: #cccccc;
+	border-color: #999999;
+	border-radius: 50px;
+	border-width: 5px;
 }
