@@ -14,7 +14,7 @@ body{
 #header{
 	padding: 10px;
 	background-color: #cd235a;
-	height: 120px;
+	min-height: 120px;
 	margin: 10px;
 	font-size: 36px;
 	font-weight: bold;
@@ -43,7 +43,7 @@ body{
 
 #footer{
 	padding: 30px;
-	height: 120px;
+	min-height: 120px;
 	background-color: #479863;
 	margin: 10px;
 }
