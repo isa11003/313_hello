@@ -53,8 +53,8 @@ html[xmlns] .slides { display: block; }
 .flexslider {
 	position: relative;
 	zoom: 1;
-	padding: 10px;
-	background: #ffffff;
+	padding: 5px;
+	background: #cccccc;
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
