@@ -17,7 +17,8 @@ body{
 }
 
 .post{
-	background-color: green;
+	text-align: center;
+	background-color: #20B2AA;
 	width: 60%;
 	font-size: 12px;
 	min-height: 40px;
