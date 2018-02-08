@@ -12,7 +12,7 @@
 			
 			foreach ($db->query("SELECT * FROM public.post") as $var)
 				{
-					$name = "SELECT name FROM public.user WHERE $var['userid'] = 'id'";
+					$name = $db->query("SELECT name FROM public.user WHERE $var['userid'] = 'id'");
 					
 					echo "<p class='name'>$name</p>";
 					echo '<div class="post">';
