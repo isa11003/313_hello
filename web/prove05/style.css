@@ -17,15 +17,13 @@ body{
 }
 
 .post{
-	margin-left: 20%;
-	margin-right: 20%;
 	text-align: center;
 	background-color: #20B2AA;
 	width: 60%;
 	color: white;
 	font-size: 18px;
 	min-height: 40px;
-	margin: 10px;
+	margin: auto;
 	border-left: 6px solid #2196F3;
 
 }
