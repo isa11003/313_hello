@@ -12,13 +12,10 @@
 			
 			foreach ($db->query("SELECT * FROM public.post") as $var)
 				{
-					echo '<p> <b>';
-					echo $var['message'] . ' ';
-				//	echo $var['chapter'] . ':';
-				//	echo $var['verse'] . ' - "';
-				//	echo '</b>';
-//					echo "<a href='scriptDeatil.php?";
-					echo  /*$var['content'] . */'</p>';
+					echo '<div class="post">';
+					echo '<p>';
+					echo $var['message'] . '</p>';
+					echo '</div>';
 				}
 		?>
 		
