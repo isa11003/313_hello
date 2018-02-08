@@ -18,7 +18,7 @@
 				//	echo $var['verse'] . ' - "';
 				//	echo '</b>';
 //					echo "<a href='scriptDeatil.php?";
-					echo  /*$var['content'] . */'"</p>';
+					echo  /*$var['content'] . */'</p>';
 				}
 		?>
 		
