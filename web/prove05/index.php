@@ -20,6 +20,8 @@
 				echo $var['message'] . '</p>';
 				if (isset($var['popularity']))
 					echo '<button class="right pop">'. $var['popularity'] . '</button>';
+				else
+					echo '<button class="right pop">0</button>';
 				echo '<p class="right">' . $var['date'] . '</p>';
 				echo '</div>';
 			}
