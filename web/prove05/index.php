@@ -18,6 +18,7 @@
 				echo '<div class="post">';
 				echo '<p>';
 				echo $var['message'] . '</p>';
+				echo '<p class="right">' . $var['date'] . '</p>';
 				echo '</div>';
 			}
 		?>
