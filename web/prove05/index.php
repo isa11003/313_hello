@@ -16,10 +16,10 @@
 			{
 				echo '<div class="post">';
 				echo '<p class="name">' . $var['userid']. '</p>';
-				if (isset($var['popularity']))
-					echo '<button class="right pop">'. $var['popularity'] . '</button>';
 				echo '<p>';
 				echo $var['message'] . '</p>';
+				if (isset($var['popularity']))
+					echo '<button class="right pop">'. $var['popularity'] . '</button>';
 				echo '<p class="right">' . $var['date'] . '</p>';
 				echo '</div>';
 			}
