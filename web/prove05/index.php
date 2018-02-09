@@ -12,7 +12,7 @@
 			
 			//$name = $db->query("SELECT name FROM public.user WHERE id = '$var[''userid'']'");
 			
-			foreach ($db->query("SELECT * FROM public.post") as $var)
+			foreach ($db->query("SELECT userid, popularity, date::DATE, message FROM public.post") as $var)
 			{
 				echo '<div class="post">';
 				echo '<p class="name">' . $var['userid']. '</p>';
