@@ -18,7 +18,7 @@
 				echo '<p class="name">' . $var['userid'] . '</p>';
 				echo '<p>';
 				echo $var['message'] . '</p>';
-				echo '<p class="right">' . CAST($var['date'] AS DATE) . '</p>';
+				echo '<p class="right">' . $var['date'] . '</p>';
 				echo '</div>';
 			}
 		?>
