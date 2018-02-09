@@ -29,14 +29,14 @@ body{
 }
 
 .name{
-	text-align: left;
+	float: left;
 	display:inline;
 	/*word-wrap: break-word;*/
 	margin-left: 5px;
 }
 
 .pop{
-	display:inline;
+	float: right;
 }
 
 .right{
