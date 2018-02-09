@@ -1,6 +1,13 @@
 <?php
 	echo '<div id="header"> <h2>Be Uplifted</h2>';
-	echo '<a href="login.php"><button>Login</button></a></div>';
+	if (basename ($_SERVER['PHP_SELF']) == "index.php")
+	{
+		echo '<a href="login.php"><button>Login</button></a></div>';
+	}
+	else if (basename ($_SERVER['PHP_SELF']) == "login.php")
+	{
+		echo '<a href="index.php"><button>Home</button></a></div>';
+	}
 	
 	//url: postgres://vioiwqpjaamamo:fbbd47b484391188e149fee848c17ac3321350af1a7f9d7f1e4f24c9fe39db92@ec2-54-235-249-33.compute-1.amazonaws.com:5432/da2aqrlp29fisb
 	
