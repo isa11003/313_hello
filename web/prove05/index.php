@@ -10,11 +10,11 @@
 		
 		<?php
 			
+			//$name = $db->query("SELECT name FROM public.user WHERE id = '$var[''userid'']'");
+			
 			foreach ($db->query("SELECT * FROM public.post") as $var)
 			{
-				$name = $db->query("SELECT name FROM public.user WHERE id = '$var[''userid'']'");
-				
-				echo "<p class='name'>$name</p>";
+				echo "<p class='name'>$var['userid']</p>";
 				echo '<div class="post">';
 				echo '<p>';
 				echo $var['message'] . '</p>';
