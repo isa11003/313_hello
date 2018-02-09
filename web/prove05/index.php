@@ -16,7 +16,7 @@
 			{
 				echo '<div class="post">';
 				echo '<p><p class="name">' . $var['userid'];
-				echo '<b class="right">'. $var['popularity'] . '</b></p>';
+				echo '<span class="right">'. $var['popularity'] . '</span></p>';
 				echo '<p>';
 				echo $var['message'] . '</p>';
 				echo '<p class="right">' . $var['date'] . '</p>';

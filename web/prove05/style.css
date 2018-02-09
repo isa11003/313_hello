@@ -29,13 +29,11 @@ body{
 }
 
 .name{
-	min-width: 10px;
 	text-align: left;
 	margin-left: 5px;
 }
 
 .right{
-	min-width: 10px;
 	text-align: right;
 	margin-right: 5px;
 }
