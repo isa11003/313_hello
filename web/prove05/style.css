@@ -25,6 +25,7 @@ body{
 	min-height: 40px;
 	margin: auto;
 	border-left: 6px solid #2196F3;
+	border-radius: 4px;
 }
 
 .name{
