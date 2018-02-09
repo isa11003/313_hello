@@ -16,7 +16,8 @@
 			{
 				echo '<div class="post">';
 				echo '<p class="name">' . $var['userid']. '</p>';
-				echo '<button class="right pop">'. $var['popularity'] . '</button>';
+				if (isset($var['popularity']))
+					echo '<button class="right pop">'. $var['popularity'] . '</button>';
 				echo '<p>';
 				echo $var['message'] . '</p>';
 				echo '<p class="right">' . $var['date'] . '</p>';
