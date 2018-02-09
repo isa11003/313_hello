@@ -30,8 +30,6 @@ body{
 
 .name{
 	text-align: left;
-	display:inline;
-	/*word-wrap: break-word;*/
 	margin-left: 5px;
 }
 
