@@ -15,7 +15,7 @@
 			foreach ($db->query("SELECT * FROM public.post") as $var)
 			{
 				echo '<div class="post">';
-				echo "<p class='name'>" . $var['userid'] . "</p>";
+				echo '<p class="name">' . $var['userid'] . '</p>';
 				echo '<p>';
 				echo $var['message'] . '</p>';
 				echo '<p class="right">' . $var['date'] . '</p>';
