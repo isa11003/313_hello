@@ -12,7 +12,7 @@
 			
 			//$name = $db->query("SELECT name FROM public.user WHERE id = '$var[''userid'']'");
 			
-			foreach ($db->query("SELECT userid, name, popularity, date::DATE, message FROM public.post
+			foreach ($db->query("SELECT userid, name, popularity, date, message FROM public.post
 								JOIN public.user ON public.post.userid = public.user.id
 								ORDER BY popularity DESC") as $var)
 			{
@@ -24,7 +24,7 @@
 					echo '<button class="right pop">'. $var['popularity'] . '</button>';
 				else
 					echo '<button class="right pop">0</button>';
-				echo '<p class="right">' . $var['date'] . '</p>';
+				echo '<p class="right">' . $var['date:DATE'] . '</p>';
 				echo '</div>';
 			}
 		?>
