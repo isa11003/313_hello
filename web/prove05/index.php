@@ -24,7 +24,7 @@
 					echo '<button class="right pop">'. $var['popularity'] . '</button>';
 				else
 					echo '<button class="right pop">0</button>';
-				echo '<p class="right">' . $var['date::DATE'] . '</p>';
+//				echo '<p class="right">' . $var['date::DATE'] . '</p>';
 				echo '</div>';
 			}
 		?>
