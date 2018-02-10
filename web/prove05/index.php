@@ -20,11 +20,9 @@
 				echo '<p class="name">' . $var['name']. '</p>';
 				echo '<p>';
 				echo $var['message'] . '</p>';
-				if (isset($var['popularity']))
-					echo '<button class="right pop">'. $var['popularity'] . '</button>';
-				else
-					echo '<button class="right pop">0</button>';
-//				echo '<p class="right">' . $var['date::DATE'] . '</p>';
+				echo '<button class="right pop">'. $var['popularity'] . '</button>';
+				$date = substr($var['date'], 0, 10);;
+				echo '<p class="right">' . $date . '</p>';
 				echo '</div>';
 			}
 		?>
