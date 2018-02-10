@@ -10,7 +10,6 @@
 		
 		<?php
 			
-			//$name = $db->query("SELECT name FROM public.user WHERE id = '$var[''userid'']'");
 			
 			foreach ($db->query("SELECT userid, name, popularity, date, message FROM public.post
 								JOIN public.user ON public.post.userid = public.user.id
@@ -22,7 +21,9 @@
 				echo $var['message'] . '</p>';
 				echo '<button class="right pop">'. $var['popularity'] . '</button>';
 				$date = substr($var['date'], 0, 10);;
-				echo '<p class="right">' . $date . '</p>';
+				echo '<p class="right">';
+				echo date('F j, Y',strtotime($date));
+				echo '</p>';
 				echo '</div>';
 			}
 		?>
