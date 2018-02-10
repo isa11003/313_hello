@@ -1,8 +1,11 @@
 <?php
 	echo '<div id="header"> <h2>Be Uplifted</h2>';
-	if (basename ($_SERVER['PHP_SELF']) == "index.php")
+	if (basename ($_SERVER['PHP_SELF']) == "index.php" || basename ($_SERVER['PHP_SELF']) == "indexp.php")
 	{
 		echo '<a href="login.php"><button>Login</button></a></div>';
+		echo '<a href="#"><button>viewRecent</button></a></div>';
+		echo '<a href="#"><button>viewPopular</button></a></div>';
+		
 	}
 	else if (basename ($_SERVER['PHP_SELF']) == "login.php")
 	{
