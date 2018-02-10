@@ -23,7 +23,9 @@
 				echo '<button class="right pop">'. $var['popularity'] . '</button>';
 			
 				$date = substr($var['date'], 0, 10);;
-				echo '<p class="right">' . $date . '</p>';
+				echo '<p class="right">';
+				echo date('F j, Y',strtotime($date));
+				echo '</p>';
 				echo '</div>';
 			}
 		?>
