@@ -14,7 +14,7 @@
 			
 			foreach ($db->query("SELECT userid, name, popularity, date::DATE, message FROM public.post
 								JOIN public.user ON public.post.userid = public.user.id
-								ORDER By date desc") as $var)
+								ORDER By date DESC") as $var)
 			{
 				echo '<div class="post">';
 				echo '<p class="name">' . $var['name']. '</p>';
