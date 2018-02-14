@@ -6,6 +6,8 @@
 		<?php
 			include 'header.php';
 				session_start();
+				
+				$loggedUserId;
 			
 				if (!isSet($_SESSION['user']))
 				{
@@ -14,11 +16,24 @@
 				else
 				{
 					$loggedUser = $_SESSION['user'];
+					$loggedUserid = $_SESSION['id'];
 					foreach($db->query("SELECT * FROM public.user WHERE id = '$loggedUser'") as $usr)
 					{
-						echo '<p>' . $usr['name'] .'</p>';
+						echo '<h3>Welcome ' . $usr['name'] .'!</h3>';
 					}
 				}
+				
+				
+				//writing to database
+				if (isSet($_POST['post']))
+			{
+				$message = $_POST['post'];
+				
+				$db->query("INSERT INTO public.post(userid, message) VALUES ($loggedUserId, $post)");
+//				$newid = $db->lastInsertId('scripture_id_seq');
+				
+				
+			}
 				
 		?>
 		
@@ -43,17 +58,15 @@
 			}
 		?>
 		
-		<form method="post" action="team05.php" target="_self">
+		<form method="post" action="index.php" target="_self">
 			<?php
 				foreach ($db->query('SELECT * FROM topic') as $top)
 				{
 					echo '<input type="checkbox" name="topic[]" value="'. $top['id'] . '">' . $top['name'] . '<br />';	
 				}
 			?>
-			<input type="text" name="book">Book <br />
-			<input type="text" name="chapter">Chapter <br />
-			<input type="text" name="verse">Verse <br />
-			<textarea cols="50" rows="5" name="content"></textarea>Content <br />
+			<p> Make a post!</p>
+			<textarea cols="50" rows="5" name="post"></textarea><br />
 			<input type="submit">
 		</form>
 		
