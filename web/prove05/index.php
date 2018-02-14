@@ -37,7 +37,7 @@
 		
 		<?php
 			
-		/*	if (isSet($_GET['view'])
+			if (isSet($_GET['view'])
 			{
 				if ($_GET['view'] == 'p')
 				{
@@ -58,9 +58,9 @@
 						echo '</div>';
 					}	
 				}
-			}*/
-		//	else
-		//	{
+			}
+			else
+			{
 				foreach ($db->query("SELECT userid, name, popularity, date, message FROM public.post
 									JOIN public.user ON public.post.userid = public.user.id
 									ORDER By date DESC") as $var)
@@ -76,7 +76,7 @@
 					echo '</p>';
 					echo '</div>';
 				}
-			//}
+			}
 		?>
 		
 		<form method="post" action="index.php" target="_self">
