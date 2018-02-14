@@ -15,7 +15,7 @@
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 	$username = $_POST['username'];
-	$password = $_POST['p	assword']
+	$password = $_POST['password'];
 	
 	foreach ($db->query("SELECT * FROM public.user WHERE username = '$username'") as $var)
 	{
@@ -24,9 +24,8 @@
 			if ($var['password'] == $password)
 			{
 				session_start();
-		
+				$user = $var[id];
 				$_SESSION[$user] = $var['id'];
-			}
 				
 				header("Location: index.php"); /* Redirect browser */
 			}
