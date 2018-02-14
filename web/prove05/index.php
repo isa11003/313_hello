@@ -5,32 +5,31 @@
 	<body>
 		<?php
 			include 'header.php';
-				session_start();
-				
-				$loggedUserId;
+			session_start();
 			
-				if (!isSet($_SESSION['user']))
+			$loggedUserId;
+			
+			if (!isSet($_SESSION['user']))
+			{
+				header("Location: login.php"); /* Redirect browser */
+			}
+			else
+			{
+				$loggedUser = $_SESSION['user'];
+				$loggedUserid = $_SESSION['id'];
+				foreach($db->query("SELECT * FROM public.user WHERE id = '$loggedUser'") as $usr)
 				{
-					header("Location: login.php"); /* Redirect browser */
+					echo '<h3>Welcome ' . $usr['name'] .'!</h3>';
 				}
-				else
-				{
-					$loggedUser = $_SESSION['user'];
-					$loggedUserid = $_SESSION['id'];
-					foreach($db->query("SELECT * FROM public.user WHERE id = '$loggedUser'") as $usr)
-					{
-						echo '<h3>Welcome ' . $usr['name'] .'!</h3>';
-					}
-				}
+			}
 				
 				
 				//writing to database
-				if (isSet($_POST['post']))
+			if (isSet($_POST['post']))
 			{
 				$message = $_POST['post'];
 				
-				$db->query("INSERT INTO public.post(userid, message) VALUES ('$loggedUserId', '$post')");
-//				$newid = $db->lastInsertId('scripture_id_seq');
+				$db->query("INSERT INTO public.post(userid, message, popularity) VALUES ('$loggedUserId', '$post', 0)");
 				
 				
 			}
