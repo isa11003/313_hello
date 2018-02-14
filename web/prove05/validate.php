@@ -38,16 +38,16 @@
 			else
 			{	
 				echo 'wrong password';
-				header("Location: login.php"); /* Redirect browser */
+			//	header("Location: login.php"); /* Redirect browser */
 			}
 		}
 		else
 		{
 			echo 'wrong name';
-			header("Location: login.php"); /* Redirect browser */
+		//	header("Location: login.php"); /* Redirect browser */
 		}
 	} 
-		header("Location: login.php"); /* Redirect browser */
+		//header("Location: login.php"); /* Redirect browser */
 	
 ?>
 </body>
