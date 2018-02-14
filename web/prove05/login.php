@@ -11,6 +11,7 @@
 			<br />
 			password<input type="password" name="password">
 			<br />
+			<input type="submit" value="submit">
 		</form>
 	</body>
 </html>
