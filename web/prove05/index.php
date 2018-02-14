@@ -29,7 +29,7 @@
 			{
 				$message = $_POST['post'];
 				
-				$db->query("INSERT INTO public.post(userid, message) VALUES ($loggedUserId, $post)");
+				$db->query("INSERT INTO public.post(userid, message) VALUES ('$loggedUserId', '$post')");
 //				$newid = $db->lastInsertId('scripture_id_seq');
 				
 				
