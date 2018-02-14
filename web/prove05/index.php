@@ -21,18 +21,17 @@
 				{
 					echo '<h3>Welcome ' . $usr['name'] .'!</h3>';
 				}
+				
+					//writing to database
+				if (isSet($_POST['post']))
+				{
+					$message = $_POST['post'];
+					$db->query("INSERT INTO public.post(userid, message) VALUES ('$loggedUserId', '$message')");
+				}
 			}
 				
 				
-				//writing to database
-			if (isSet($_POST['post']))
-			{
-				$message = $_POST['post'];
-				
-				$db->query("INSERT INTO public.post(userid, message) VALUES ('$loggedUserId', '$message')");
-				
-				
-			}
+			
 				
 		?>
 		
@@ -58,14 +57,8 @@
 		?>
 		
 		<form method="post" action="index.php" target="_self">
-			<?php
-				foreach ($db->query('SELECT * FROM topic') as $top)
-				{
-					echo '<input type="checkbox" name="topic[]" value="'. $top['id'] . '">' . $top['name'] . '<br />';	
-				}
-			?>
 			<p> Make a post!</p>
-			<textarea cols="50" rows="5" name="post"></textarea><br />
+			<textarea cols="100" rows="5" name="post"></textarea><br />
 			<input type="submit">
 		</form>
 		
