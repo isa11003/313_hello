@@ -9,7 +9,7 @@
 		echo '<a href="indexP.php"><button>viewPopular</button></a>';
 		
 	}
-	else if (basename ($_SERVER['PHP_SELF']) == "login.php" OR basename ($_SERVER['PHP_SELF'] == "createUser.php")
+	else if (basename ($_SERVER['PHP_SELF']) == "login.php" OR basename ($_SERVER['PHP_SELF']) == "createUser.php")
 	{
 		echo '<a href="index.php"><button>Home</button></a>';
 		echo '<a href="createUser.php"><button>Create Account</button></a></div>';
