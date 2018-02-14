@@ -1,3 +1,7 @@
+<html>
+<head>
+</head>
+<body>
 <?php
 	
 	$dbUrl = getenv('DATABASE_URL');
@@ -37,3 +41,5 @@
 		}
 	} 
 ?>
+</body>
+</html>
