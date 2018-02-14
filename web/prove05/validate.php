@@ -34,6 +34,7 @@
 				echo $_SESSION[$user];
 				
 				header("Location: index.php"); /* Redirect browser */
+				die();
 			}
 			else
 			{	
