@@ -10,7 +10,7 @@
 		echo '</form>';
 		echo '<form method="post" action="index.php?view=p" target="_self">';
 		echo '<a href="indexP.php"><input type="submit" name="viewPopular"</a>';
-		</form>
+		echo '</form>';
 		
 	}
 	else if (basename ($_SERVER['PHP_SELF']) == "login.php" OR basename ($_SERVER['PHP_SELF']) == "createUser.php")
