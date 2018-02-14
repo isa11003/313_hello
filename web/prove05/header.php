@@ -5,11 +5,11 @@
 		echo '<a href="login.php"><button>Login</button></a>';
 		echo '<a href="createUser.php"><button>Create Account</button></a>';
 		echo '<a href="logout.php"><button>logout</button></a></div>';
-		<form method="post" action="index.php" target="_self">
-			echo '<a href="index.php"><input type="submit" name="viewRecent"</a>';
-		</form>
-		<form method="post" action="index.php?view=p" target="_self">
-			echo '<a href="indexP.php"><input type="submit" name="viewPopular"</a>';
+		echo '<form method="post" action="index.php" target="_self">';
+		echo '<a href="index.php"><input type="submit" name="viewRecent"</a>';
+		echo '</form>';
+		echo '<form method="post" action="index.php?view=p" target="_self">';
+		echo '<a href="indexP.php"><input type="submit" name="viewPopular"</a>';
 		</form>
 		
 	}
