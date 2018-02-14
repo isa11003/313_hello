@@ -5,12 +5,14 @@
 		echo '<a href="login.php"><button>Login</button></a>';
 		echo '<a href="createUser.php"><button>Create Account</button></a>';
 		echo '<a href="logout.php"><button>logout</button></a></div>';
-		echo '<form method="get" action="index.php" target="_self">';
-		echo '<input type="submit" value="viewRecent">';
-		echo '</form>';
-		echo '<form method="get" action="index.php?view=p" target="_self">';
-		echo '<input type="submit" value="viewPopular">';
-		echo '</form>';
+		echo '<a href="index.php"><button>Recent</button></a>';
+		echo '<a href="indexP.php"><button>Popular</button></a>';
+		//echo '<form method="get" action="index.php" target="_self">';
+		//echo '<input type="submit" value="viewRecent">';
+		//echo '</form>';
+		//echo '<form method="get" action="index.php?view=p" target="_self">';
+		//echo '<input type="submit" value="viewPopular">';
+		//echo '</form>';
 		
 	}
 	else if (basename ($_SERVER['PHP_SELF']) == "login.php" OR basename ($_SERVER['PHP_SELF']) == "createUser.php")
