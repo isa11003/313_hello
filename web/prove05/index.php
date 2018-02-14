@@ -76,7 +76,7 @@
 					echo '</p>';
 					echo '</div>';
 				}
-			}
+			//}
 		?>
 		
 		<form method="post" action="index.php" target="_self">
