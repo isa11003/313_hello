@@ -6,7 +6,7 @@
 		<?php
 			include 'header.php';
 		?>
-		<form>
+		<form method="post" action="validate.php" target="_self">
 			username<input type="text" name="username">
 			<br />
 			password<input type="password" name="password">
