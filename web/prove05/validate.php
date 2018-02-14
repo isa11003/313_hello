@@ -21,8 +21,10 @@
 	{
 		if ($var['username'] == $username)
 		{
+			<script type="text/javascript"> alert('username same');</script>
 			if ($var['password'] == $password)
 			{
+				<script type="text/javascript"> alert('password same');</script>
 				session_start();
 				$user = $var[id];
 				$_SESSION[$user] = $var['id'];
@@ -31,15 +33,17 @@
 			}
 			else
 			{	
+				<script type="text/javascript"> alert('password different');</script>
 				header("Location: login.php"); /* Redirect browser */
 			}
 		}
 		else
 		{
+			<script type="text/javascript"> alert('username different');</script>
 			header("Location: login.php"); /* Redirect browser */
 		}
 	} 
-	header("Location: login.php"); /* Redirect browser */
+		header("Location: login.php"); /* Redirect browser */
 	
 ?>
 </body>
