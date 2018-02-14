@@ -14,7 +14,7 @@
 	
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-	$nam = $_POST['name'];
+	$name = $_POST['name'];
 	
 	$db->query("INSERT INTO public.user(name, username, password) VALUES ('$name', '$username', '$password')");
 	

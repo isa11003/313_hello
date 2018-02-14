@@ -3,14 +3,15 @@
 	if (basename ($_SERVER['PHP_SELF']) == "index.php" OR basename ($_SERVER['PHP_SELF']) == "indexP.php")
 	{
 		echo '<a href="login.php"><button>Login</button></a>';
-		echo '<a href="createUser.php"><button>Create Account</button></a></div>';
+		echo '<a href="createUser.php"><button>Create Account</button></a>';
+		echo '<a href="logout.php"><button>logout</button></a></div>';
 		echo '<a href="index.php"><button>viewRecent</button></a>';
 		echo '<a href="indexP.php"><button>viewPopular</button></a>';
 		
 	}
 	else if (basename ($_SERVER['PHP_SELF']) == "login.php")
 	{
-		echo '<a href="index.php"><button>Home</button></a></div>';
+		echo '<a href="index.php"><button>Home</button></a>';
 		echo '<a href="createUser.php"><button>Create Account</button></a></div>';
 		
 	}
