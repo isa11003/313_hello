@@ -9,7 +9,7 @@
 			
 				if (!isSet($_SESSION[$user]))
 				{
-					//header("Location: login.php"); /* Redirect browser */
+					header("Location: login.php"); /* Redirect browser */
 				}
 				
 		?>
