@@ -6,10 +6,10 @@
 		echo '<a href="createUser.php"><button>Create Account</button></a>';
 		echo '<a href="logout.php"><button>logout</button></a></div>';
 		echo '<form method="post" action="index.php" target="_self">';
-		echo '<a href="index.php"><input type="submit" name="viewRecent"</a>';
+		echo '<input type="submit" value="viewRecent">';
 		echo '</form>';
 		echo '<form method="post" action="index.php?view=p" target="_self">';
-		echo '<a href="indexP.php"><input type="submit" name="viewPopular"</a>';
+		echo '<input type="submit" value="viewPopular">';
 		echo '</form>';
 		
 	}
