@@ -7,11 +7,7 @@
 			include 'header.php';
 				session_start();
 			
-				if (isSet($_SESSION[$user]))
-				{
-					
-				}
-				else
+				if (!isSet($_SESSION[$user]))
 				{
 					header("Location: login.php"); /* Redirect browser */
 				}

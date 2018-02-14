@@ -31,7 +31,9 @@
 				$user = $var[id];
 				$_SESSION[$user] = $var['id'];
 				
-				header("Location: index.php"); /* Redirect browser */
+				echo $_SESSION[$user];
+				
+//				header("Location: index.php"); /* Redirect browser */
 			}
 			else
 			{	
