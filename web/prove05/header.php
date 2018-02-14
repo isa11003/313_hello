@@ -6,7 +6,7 @@
 		echo '<a href="createUser.php"><button>Create Account</button></a>';
 		echo '<a href="logout.php"><button>logout</button></a></div>';
 		echo '<a href="index.php"><button>Recent</button></a>';
-		echo '<a href="indexP.php"><button>Popular</button></a>';
+		echo '<a href="index.php?view=p"><button>Popular</button></a>';
 		//echo '<form method="get" action="index.php" target="_self">';
 		//echo '<input type="submit" value="viewRecent">';
 		//echo '</form>';
