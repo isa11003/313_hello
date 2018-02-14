@@ -21,29 +21,29 @@
 	{
 		if ($var['username'] == $username)
 		{
-			<script type="text/javascript"> alert('username same');</script>
+			echo 'same name';
 			if ($var['password'] == $password)
 			{
-				<script type="text/javascript"> alert('password same');</script>
+				echo 'same password';
 				session_start();
 				$user = $var[id];
 				$_SESSION[$user] = $var['id'];
 				
-				header("Location: index.php"); /* Redirect browser */
+			//	header("Location: index.php"); /* Redirect browser */
 			}
 			else
 			{	
-				<script type="text/javascript"> alert('password different');</script>
-				header("Location: login.php"); /* Redirect browser */
+				echo 'wrong password';
+			//	header("Location: login.php"); /* Redirect browser */
 			}
 		}
 		else
 		{
-			<script type="text/javascript"> alert('username different');</script>
-			header("Location: login.php"); /* Redirect browser */
+			echo 'wrong name';
+			//header("Location: login.php"); /* Redirect browser */
 		}
 	} 
-		header("Location: login.php"); /* Redirect browser */
+		//header("Location: login.php"); /* Redirect browser */
 	
 ?>
 </body>
