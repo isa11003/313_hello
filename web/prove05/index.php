@@ -14,9 +14,9 @@
 				else
 				{
 					$loggedUser = $_SESSION['user'];
-					foreach($db->queary("SELECT * FROM public.user WHERE id = '1'") as $usr)
+				//	foreach($db->queary("SELECT * FROM public.user WHERE id = '1'") as $usr)
 					{
-						echo '<p>' . $usr['name'] .'</p>';
+				//		echo '<p>' . $usr['name'] .'</p>';
 					}
 				}
 				
