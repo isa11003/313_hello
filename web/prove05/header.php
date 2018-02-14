@@ -5,10 +5,10 @@
 		echo '<a href="login.php"><button>Login</button></a>';
 		echo '<a href="createUser.php"><button>Create Account</button></a>';
 		echo '<a href="logout.php"><button>logout</button></a></div>';
-		echo '<form method="post" action="index.php" target="_self">';
+		echo '<form method="get" action="index.php" target="_self">';
 		echo '<input type="submit" value="viewRecent">';
 		echo '</form>';
-		echo '<form method="post" action="index.php?view=p" target="_self">';
+		echo '<form method="get" action="index.php?view=p" target="_self">';
 		echo '<input type="submit" value="viewPopular">';
 		echo '</form>';
 		
