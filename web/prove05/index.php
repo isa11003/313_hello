@@ -7,9 +7,16 @@
 			include 'header.php';
 				session_start();
 			
-				if (!isSet($_SESSION[$user]))
+				if (!isSet($_SESSION['user']))
 				{
 					header("Location: login.php"); /* Redirect browser */
+				}
+				else
+				{
+					foreach($db->queary("SELECT * FROM public.user") as $usr)
+					{
+						echo '<p>' . $usr['name'] .'</p>';
+					}
 				}
 				
 		?>

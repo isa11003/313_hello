@@ -28,10 +28,10 @@
 			{
 				echo 'same password';
 				
-				$user = $var[id];
-				$_SESSION[$user] = $var['id'];
+	//			$user = $var[id];
+				$_SESSION['user'] = $var['id'];
 				
-				echo $_SESSION[$user];
+				echo $_SESSION['user'];
 				
 				header("Location: index.php"); /* Redirect browser */
 				die();
