@@ -1,7 +1,3 @@
-<html>
-<head>
-</head>
-<body>
 <?php
 	
 	$dbUrl = getenv('DATABASE_URL');
@@ -23,33 +19,23 @@
 	{
 		if ($var['username'] == $username)
 		{
-			echo 'same name';
 			if ($var['password'] == $password)
 			{
-				echo 'same password';
-				
-	//			$user = $var[id];
 				$_SESSION['user'] = $var['id'];
-				
-				echo $_SESSION['user'];
 				
 				header("Location: index.php"); /* Redirect browser */
 				die();
 			}
 			else
 			{	
-				echo 'wrong password';
 				header("Location: login.php"); /* Redirect browser */
 			}
 		}
 		else
 		{
-			echo 'wrong name';
 			header("Location: login.php"); /* Redirect browser */
 		}
 	} 
 		header("Location: login.php"); /* Redirect browser */
 	
 ?>
-</body>
-</html>
