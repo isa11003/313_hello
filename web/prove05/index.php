@@ -29,7 +29,7 @@
 			{
 				$message = $_POST['post'];
 				
-				$db->query("INSERT INTO public.post(userid, message, popularity) VALUES ('$loggedUserId', '$post', 0)");
+				$db->query("INSERT INTO public.post(userid, message, popularity) VALUES ('$loggedUserId', '$message', 0)");
 				
 				
 			}
