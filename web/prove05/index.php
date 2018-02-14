@@ -5,6 +5,17 @@
 	<body>
 		<?php
 			include 'header.php';
+				session_start();
+			
+				if (isSet($_SESSION[$user]))
+				{
+					
+				}
+				else
+				{
+					header("Location: login.php"); /* Redirect browser */
+				}
+				
 		?>
 		
 		
@@ -27,6 +38,20 @@
 				echo '</div>';
 			}
 		?>
+		
+		<form method="post" action="team05.php" target="_self">
+			<?php
+				foreach ($db->query('SELECT * FROM topic') as $top)
+				{
+					echo '<input type="checkbox" name="topic[]" value="'. $top['id'] . '">' . $top['name'] . '<br />';	
+				}
+			?>
+			<input type="text" name="book">Book <br />
+			<input type="text" name="chapter">Chapter <br />
+			<input type="text" name="verse">Verse <br />
+			<textarea cols="50" rows="5" name="content"></textarea>Content <br />
+			<input type="submit">
+		</form>
 		
 		
 	</body>
