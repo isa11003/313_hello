@@ -5,8 +5,12 @@
 		echo '<a href="login.php"><button>Login</button></a>';
 		echo '<a href="createUser.php"><button>Create Account</button></a>';
 		echo '<a href="logout.php"><button>logout</button></a></div>';
-		echo '<a href="index.php"><button>viewRecent</button></a>';
-		echo '<a href="indexP.php"><button>viewPopular</button></a>';
+		<form method="post" action="index.php" target="_self">
+			echo '<a href="index.php"><input type="submit" name="viewRecent"</a>';
+		</form>
+		<form method="post" action="index.php?view=p" target="_self">
+			echo '<a href="indexP.php"><input type="submit" name="viewPopular"</a>';
+		</form>
 		
 	}
 	else if (basename ($_SERVER['PHP_SELF']) == "login.php" OR basename ($_SERVER['PHP_SELF']) == "createUser.php")
@@ -15,8 +19,6 @@
 		echo '<a href="createUser.php"><button>Create Account</button></a></div>';
 		
 	}
-	
-	//url: postgres://vioiwqpjaamamo:fbbd47b484391188e149fee848c17ac3321350af1a7f9d7f1e4f24c9fe39db92@ec2-54-235-249-33.compute-1.amazonaws.com:5432/da2aqrlp29fisb
 	
 	$dbUrl = getenv('DATABASE_URL');
 	$dbopts = parse_url($dbUrl);
