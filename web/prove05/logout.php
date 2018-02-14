@@ -3,7 +3,7 @@
 	
 	session_start();
 	
-	if (isset($_POST['user']))
+	if (isset($_SESSION['user']))
 	{
 		unset($_SESSION['user']);
 	}
