@@ -14,6 +14,8 @@
 
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
+	session_start();
+	
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
@@ -25,25 +27,25 @@
 			if ($var['password'] == $password)
 			{
 				echo 'same password';
-				session_start();
+				
 				$user = $var[id];
 				$_SESSION[$user] = $var['id'];
 				
-			//	header("Location: index.php"); /* Redirect browser */
+				header("Location: index.php"); /* Redirect browser */
 			}
 			else
 			{	
 				echo 'wrong password';
-			//	header("Location: login.php"); /* Redirect browser */
+				header("Location: login.php"); /* Redirect browser */
 			}
 		}
 		else
 		{
 			echo 'wrong name';
-			//header("Location: login.php"); /* Redirect browser */
+			header("Location: login.php"); /* Redirect browser */
 		}
 	} 
-		//header("Location: login.php"); /* Redirect browser */
+		header("Location: login.php"); /* Redirect browser */
 	
 ?>
 </body>
