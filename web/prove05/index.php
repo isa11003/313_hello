@@ -13,7 +13,8 @@
 				}
 				else
 				{
-					foreach($db->queary("SELECT * FROM public.user") as $usr)
+					$loggedUser = $_SESSION['user'];
+					foreach($db->queary("SELECT * FROM public.user WHERE id = '$loggedUser'") as $usr)
 					{
 						echo '<p>' . $usr['name'] .'</p>';
 					}

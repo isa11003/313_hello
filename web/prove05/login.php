@@ -8,7 +8,7 @@
 			
 			session_start();
 			
-			if (isSet($_SESSION[$user]))
+			if (isSet($_SESSION['user']))
 			{
 				header("Location: index.php"); /* Redirect browser */
 			}
