@@ -9,12 +9,12 @@
 			session_start();
 			
 		?>
-		<form method="post" action="createAccount.php" target="_self">
-			screen name&nbsp;<input type="text" name="name">
+		<form method="post" action="createAccount.php" target="_self" onsubmit="return validateCreateUser()">
+			screen name&nbsp;<input id="scrname" type="text" name="name">
 			<br />
-			username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username">
+			username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="usrname" type="text" name="username">
 			<br />
-			password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password">
+			password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="pass" type="password" name="password">
 			<br />
 			<input type="submit" value="Create Account">
 		</form>
