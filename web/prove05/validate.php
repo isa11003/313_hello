@@ -15,27 +15,33 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
-	foreach ($db->query("SELECT username, password, id FROM public.user WHERE username = '$username'") as $var)
+	$query = 'SELECT username, password, id FROM public.user WHERE username = :username';
+	
+	
+	$statement = $db->prepare($query);
+						
+	$statement->bindValue(':username', $username);
+	
+	$statement->execute();
+	
+	$user = $statement->fetch();
+	
+	if ($user['username'] == $username)
 	{
-		if ($var['username'] == $username)
+		if ($user['password'] == $password)
 		{
-			if ($var['password'] == $password)
-			{
-				$_SESSION['user'] = $var['id'];
-				
-				header("Location: index.php"); /* Redirect browser */
-				die();
-			}
-			else
-			{	
-				header("Location: login.php"); /* Redirect browser */
-			}
+			$_SESSION['user'] = $user['id'];
+			
+			header("Location: index.php"); /* Redirect browser */
 		}
 		else
-		{
+		{	
 			header("Location: login.php"); /* Redirect browser */
 		}
-	} 
+	}
+	else
+	{
 		header("Location: login.php"); /* Redirect browser */
+	}
 	
 ?>

@@ -10,11 +10,11 @@
 			
 		?>
 		<form method="post" action="createAccount.php" target="_self">
-			screen name<input type="text" name="name">
+			screen name&nbsp;<input type="text" name="name">
 			<br />
-			username&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username">
+			username&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username">
 			<br />
-			password&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password">
+			password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password">
 			<br />
 			<input type="submit" value="submit">
 		</form>
