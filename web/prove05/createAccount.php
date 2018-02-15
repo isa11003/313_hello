@@ -27,7 +27,6 @@
 	
 	$_SESSION['user'] = $db->lastInsertId('public.user_id_seq');
 				
-
 	header("Location: index.php"); /* Redirect browser */
 	
 ?>

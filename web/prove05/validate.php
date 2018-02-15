@@ -15,7 +15,7 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
-	foreach ($db->query("SELECT * FROM public.user WHERE username = '$username'") as $var)
+	foreach ($db->query("SELECT username, password, id FROM public.user WHERE username = '$username'") as $var)
 	{
 		if ($var['username'] == $username)
 		{

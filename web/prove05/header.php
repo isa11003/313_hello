@@ -2,11 +2,9 @@
 	echo '<div id="header"> <h2>Be Uplifted</h2>';
 	if (basename ($_SERVER['PHP_SELF']) == "index.php" OR basename ($_SERVER['PHP_SELF']) == "indexP.php")
 	{
-		echo '<a href="login.php"><button>Login</button></a>';
-		echo '<a href="createUser.php"><button>Create Account</button></a>';
-		echo '<a href="logout.php"><button>logout</button></a></div>';
-		echo '<a href="index.php"><button>Recent</button></a>';
-		echo '<a href="index.php?view=p"><button>Popular</button></a>';
+		echo '<a href="logout.php"><button>logout</button></a>';
+		echo '<a href="index.php"><button>View Recent</button></a>';
+		echo '<a href="index.php?view=p"><button>View Popular</button></a></div>';
 		//echo '<form method="get" action="index.php" target="_self">';
 		//echo '<input type="submit" value="viewRecent">';
 		//echo '</form>';
@@ -17,7 +15,6 @@
 	}
 	else if (basename ($_SERVER['PHP_SELF']) == "login.php" OR basename ($_SERVER['PHP_SELF']) == "createUser.php")
 	{
-		echo '<a href="index.php"><button>Home</button></a>';
 		echo '<a href="createUser.php"><button>Create Account</button></a></div>';
 		
 	}

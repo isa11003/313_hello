@@ -14,7 +14,7 @@
 			else
 			{
 				$loggedUser = $_SESSION['user'];
-				foreach($db->query("SELECT * FROM public.user WHERE id = '$loggedUser'") as $usr)
+				foreach($db->query("SELECT name FROM public.user WHERE id = '$loggedUser'") as $usr)
 				{
 					echo '<h3>Welcome ' . $usr['name'] .'!</h3>';
 					
