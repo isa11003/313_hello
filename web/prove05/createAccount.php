@@ -16,9 +16,14 @@
 	$password = $_POST['password'];
 	$name = $_POST['name'];
 	
-	$db->query("INSERT INTO public.user(name, username, password) VALUES ('$name', '$username', '$password')");
+	$query = 'INSERT INTO public.user(name, username, password) VALUES (:name, :username, :password)';
+	$statement = $db->prepare($query);
+						
+	$statement->bindValue(':name', $name);
+	$statement->bindValue(':username', $username);
+	$statement->bindValue(':password', $password);
 	
-	
+	$statement->execute();
 	
 	$_SESSION['user'] = $db->lastInsertId('public.user_id_seq');
 				
