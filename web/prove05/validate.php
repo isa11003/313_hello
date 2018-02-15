@@ -36,12 +36,12 @@
 		}
 		else
 		{	
-			header("Location: login.php"); /* Redirect browser */
+			header("Location: login.php?error=1"); /* Redirect browser */
 		}
 	}
 	else
 	{
-		header("Location: login.php"); /* Redirect browser */
+		header("Location: login.php?error=2"); /* Redirect browser */
 	}
 	
 ?>

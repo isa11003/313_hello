@@ -12,6 +12,17 @@
 			{
 				header("Location: index.php"); /* Redirect browser */
 			}
+			
+			if (isSet($_GET['error']))
+			{
+				if ($_GET['error'] === '1')
+				{
+					echo '<h2 class="error">Incorrect Username</h2>';
+				}
+				else if($_GET['error' === '2')
+				{
+					echo '<h2 class="error">Incorrect Password</h2>';
+				}
 		?>
 		<form method="post" action="validate.php" target="_self">
 			username<input type="text" name="username">

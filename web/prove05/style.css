@@ -37,6 +37,10 @@ body{
 	text-align: right;
 }
 
+.error{
+	color: red;
+}
+
 .right{
 	text-align: right;
 	margin-right: 5px;
