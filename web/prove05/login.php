@@ -25,10 +25,10 @@
 				}
 			}
 		?>
-		<form method="post" action="validate.php" target="_self">
-			username<input type="text" name="username">
+		<form method="post" action="validate.php" target="_self" onsubmit="return validateLogin()">
+			username<input id="usrname" type="text" name="username">
 			<br />
-			password<input type="password" name="password">
+			password<input id="pass" type="password" name="password">
 			<br />
 			<input type="submit" value="Login">
 		</form>

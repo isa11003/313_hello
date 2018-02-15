@@ -42,3 +42,51 @@ function validateCreateUser(){
 	else
 		return false;
 }
+
+function validatePost(){
+	var text = document.getElementById("messagePost").value;
+	
+	if (text == '')
+	{
+		alert("Cannot make an empty post");
+		return false;
+	}
+	else
+		return true;
+}
+
+function validateLogin(){
+	
+	var usrname = document.getElementById('usrname').value;
+	var password = document.getElementById('pass').value;
+
+	
+	var hasUserName = false;
+	var hasPassword = false;
+	
+	
+	if ( usrname == '')
+	{
+		alert("Username required");
+		return false;
+	}
+	else
+	{
+		hasUserName = true;
+	}
+	
+	if ( password == '')
+	{
+		alert("password required");
+		return false;
+	}
+	else
+	{
+		hasPassword = true;
+	}
+	
+	if ( hasPassword && hasUserName)
+		return true;
+	else
+		return false;
+}
