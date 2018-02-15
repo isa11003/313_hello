@@ -17,11 +17,11 @@
 			{
 				if ($_GET['error'] === '1')
 				{
-					echo '<h2 class="error">Incorrect Username</h2>';
+					echo '<h2 class="error">Incorrect Password</h2>';
 				}
 				else if($_GET['error'] === '2')
 				{
-					echo '<h2 class="error">Incorrect Password</h2>';
+					echo '<h2 class="error">Incorrect Username</h2>';
 				}
 			}
 		?>
@@ -30,7 +30,7 @@
 			<br />
 			password<input type="password" name="password">
 			<br />
-			<input type="submit" value="submit">
+			<input type="submit" value="Login">
 		</form>
 	</body>
 </html>

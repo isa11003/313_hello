@@ -86,7 +86,7 @@
 		<form method="post" action="index.php" target="_self">
 			<p> Make a post!</p>
 			<textarea cols="100" rows="5" name="post"></textarea><br />
-			<input type="submit">
+			<input type="submit" value="Post">
 		</form>
 		
 		

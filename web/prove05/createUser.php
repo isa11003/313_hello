@@ -16,7 +16,7 @@
 			<br />
 			password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password">
 			<br />
-			<input type="submit" value="submit">
+			<input type="submit" value="Create Account">
 		</form>
 	</body>
 </html>
