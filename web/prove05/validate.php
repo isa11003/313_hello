@@ -26,7 +26,7 @@
 	
 	$user = $statement->fetch();
 	
-	if (!isSet($user))
+	if ($user['username'] == $username)
 	{
 		if ($user['password'] == $password)
 		{
