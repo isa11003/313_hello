@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="js.js"></script>
 	</head>
 	<body>
 		<?php
