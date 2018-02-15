@@ -23,6 +23,7 @@
 				{
 					echo '<h2 class="error">Incorrect Password</h2>';
 				}
+			}
 		?>
 		<form method="post" action="validate.php" target="_self">
 			username<input type="text" name="username">
