@@ -1,7 +1,7 @@
 function validateCreateUser(){
-	var scrname = getElementById('scrname').value;
-	var usrname = getElementById('usrname').value;
-	var password = getElementById('pass').value;
+	var scrname = document.getElementById('scrname').value;
+	var usrname = document.getElementById('usrname').value;
+	var password = document.getElementById('pass').value;
 
 	var hasScreenName = false;
 	var hasUserName = false;
@@ -10,6 +10,7 @@ function validateCreateUser(){
 	if ( scrname == '')
 	{
 		alert("screen name required");
+		return false;
 	}
 	else
 	{
@@ -19,6 +20,7 @@ function validateCreateUser(){
 	if ( usrname == '')
 	{
 		alert("Username required");
+		return false;
 	}
 	else
 	{
@@ -28,6 +30,7 @@ function validateCreateUser(){
 	if ( password == '')
 	{
 		alert("password required");
+		return false;
 	}
 	else
 	{
