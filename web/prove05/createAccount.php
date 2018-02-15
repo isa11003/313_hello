@@ -12,9 +12,9 @@
 
 	session_start();
 	
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$name = $_POST['name'];
+	$username = htmlspecialchars($_POST['username']);
+	$password = htmlspecialchars($_POST['password']);
+	$name = htmlspecialchars($_POST['name']);
 	
 	$query = 'INSERT INTO public.user(name, username, password) VALUES (:name, :username, :password)';
 	$statement = $db->prepare($query);

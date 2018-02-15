@@ -22,7 +22,7 @@
 					//writing to database
 					if (isSet($_POST['post']))
 					{
-						$message = $_POST['post'];
+						$message = htmlspecialchars($_POST['post']);
 						
 						$query = "INSERT INTO public.post(userid, message) VALUES ('$loggedUser', :message)";
 						$statement = $db->prepare($query);
