@@ -22,7 +22,14 @@
 					if (isSet($_POST['post']))
 					{
 						$message = $_POST['post'];
-						$db->query("INSERT INTO public.post(userid, message) VALUES ('$loggedUser', '$message')");
+						
+						//$db->query("INSERT INTO public.post(userid, message) VALUES ('$loggedUser', '$message')");
+						$query = "INSERT INTO public.post(userid, message) VALUES ('$loggedUser', :message)";
+						$statement = $db->prepare($query);
+						
+						$statement->bindValue(':message', $message);
+						
+						$statement->execute();
 					}
 				}
 				
@@ -37,7 +44,7 @@
 		
 		<?php
 			
-			if (isSet($_GET['view'])
+			/*if (isSet($_GET['view'])
 			{
 				if ($_GET['view'] === 'p')
 				{
@@ -60,7 +67,7 @@
 				}
 			}
 			else
-			{
+			{*/
 				foreach ($db->query("SELECT userid, name, popularity, date, message FROM public.post
 									JOIN public.user ON public.post.userid = public.user.id
 									ORDER By date DESC") as $var)
@@ -76,7 +83,7 @@
 					echo '</p>';
 					echo '</div>';
 				}
-			}
+			//}
 		?>
 		
 		<form method="post" action="index.php" target="_self">
