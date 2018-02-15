@@ -19,7 +19,7 @@
 				{
 					echo '<h2 class="error">Incorrect Username</h2>';
 				}
-				else if($_GET['error' === '2')
+				else if($_GET['error'] === '2')
 				{
 					echo '<h2 class="error">Incorrect Password</h2>';
 				}
