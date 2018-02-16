@@ -11,6 +11,7 @@
 			if (!isSet($_SESSION['user']))
 			{
 				header("Location: login.php"); /* Redirect browser */
+				die();
 			}
 			else
 			{
@@ -66,7 +67,7 @@
 			}
 			else
 			{
-				foreach ($db->query("SELECT userid, name, popularity, date, message FROM public.post
+				foreach ($db->query("SELECT userid, name, post.id, popularity, date, message FROM public.post
 									JOIN public.user ON public.post.userid = public.user.id
 									ORDER By date DESC") as $var)
 				{
@@ -74,7 +75,14 @@
 					echo '<p class="name">' . $var['name']. '</p>';
 					echo '<p>';
 					echo $var['message'] . '</p>';
-					echo '<button class="right pop">'. $var['popularity'] . '</button>';
+					
+					echo '<form method="post" action="index.php" target="_self">';
+					echo "<input type='hidden' name='postId' value='" . $var['post.id'] . "'>";
+					echo "<input type='hidden' name='userId' value='" . $var['userid'] . "'>";
+					echo '<input type="submit" value="' . $var['popularity'] . '">';
+					echo '</form>';
+					
+					//echo '<button class="right pop">'. $var['popularity'] . '</button>';
 					$date = substr($var['date'], 0, 10);
 					echo '<p class="right">';
 					echo date('F j, Y',strtotime($date));

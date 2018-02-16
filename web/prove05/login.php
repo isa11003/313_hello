@@ -12,6 +12,7 @@
 			if (isSet($_SESSION['user']))
 			{
 				header("Location: index.php"); /* Redirect browser */
+				die();
 			}
 			
 			if (isSet($_GET['error']))

@@ -33,15 +33,18 @@
 			$_SESSION['user'] = $user['id'];
 			
 			header("Location: index.php"); /* Redirect browser */
+			die();
 		}
 		else
 		{	
 			header("Location: login.php?error=1"); /* Redirect browser */
+			die();
 		}
 	}
 	else
 	{
 		header("Location: login.php?error=2"); /* Redirect browser */
+		die();
 	}
 	
 ?>
