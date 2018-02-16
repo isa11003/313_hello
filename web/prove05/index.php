@@ -34,6 +34,19 @@
 					}
 				}
 			}
+			
+			if(isSet($_POST['postId']))
+			{
+				$postId = $_POST['postId'];
+				$userId = $_POST['userId'];
+				
+				$query = "INSERT INTO public.like (userid, postid) VALUES('$userId','$postId') ";
+				
+				$request = $db->prepare($query);
+				
+				if ($request->execute())
+					$db->query("UPDATE public.post SET popularity = popularity + 1 WHERE id = '$postId'");
+			}
 				
 				
 			
