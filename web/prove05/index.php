@@ -67,7 +67,7 @@
 			}
 			else
 			{
-				foreach ($db->query("SELECT userid, name, post.id, popularity, date, message FROM public.post
+				foreach ($db->query("SELECT userid, name, public.post.id, popularity, date, message FROM public.post
 									JOIN public.user ON public.post.userid = public.user.id
 									ORDER By date DESC") as $var)
 				{
@@ -77,7 +77,7 @@
 					echo $var['message'] . '</p>';
 					
 					echo '<form method="post" action="index.php" target="_self">';
-					echo "<input type='hidden' name='postId' value='" . $var['post.id'] . "'>";
+					echo "<input type='hidden' name='postId' value='" . $var['id'] . "'>";
 					echo "<input type='hidden' name='userId' value='" . $var['userid'] . "'>";
 					echo '<input type="submit" value="' . $var['popularity'] . '">';
 					echo '</form>';
