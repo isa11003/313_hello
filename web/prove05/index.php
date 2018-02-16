@@ -56,10 +56,16 @@
 		
 		<?php
 			
+			$query;
+			
 			if (isSet($_GET['view']))
 			{
 				if ($_GET['view'] === 'p')
 				{
+					$query = "$db->query('SELECT userid, name, popularity, date, message FROM public.post
+									JOIN public.user ON public.post.userid = public.user.id
+									ORDER BY popularity DESC')";
+					/*
 					foreach ($db->query("SELECT userid, name, popularity, date, message FROM public.post
 									JOIN public.user ON public.post.userid = public.user.id
 									ORDER BY popularity DESC") as $var)
@@ -75,11 +81,15 @@
 						echo date('F j, Y',strtotime($date));
 						echo '</p>';
 						echo '</div>';
-					}	
+					}	*/
 				}
 			}
 			else
-			{
+			{ 
+				$query = "db->query('SELECT userid, name, public.post.id, popularity, date, message FROM public.post
+									JOIN public.user ON public.post.userid = public.user.id
+									ORDER By date DESC')";
+		/*
 				foreach ($db->query("SELECT userid, name, public.post.id, popularity, date, message FROM public.post
 									JOIN public.user ON public.post.userid = public.user.id
 									ORDER By date DESC") as $var)
@@ -99,8 +109,28 @@
 					echo date('F j, Y',strtotime($date));
 					echo '</p>';
 					echo '</div>';
-				}
+				} */
 			}
+			
+			foreach($query)
+			{
+					echo '<div class="post">';
+					echo '<p class="name">' . $var['name']. '</p>';
+					echo '<p>';
+					echo $var['message'] . '</p>';
+					
+					echo '<form method="post" action="index.php" target="_self">';
+					echo "<input type='hidden' name='postId' value='" . $var['id'] . "'>";
+					echo '<input type="submit" value="' . $var['popularity'] . '">';
+					echo '</form>';
+					
+					$date = substr($var['date'], 0, 10);
+					echo '<p class="right">';
+					echo date('F j, Y',strtotime($date));
+					echo '</p>';
+					echo '</div>';
+				}
+			
 		?>
 		
 		<form method="post" action="index.php" target="_self" onsubmit="return validatePost()">
