@@ -62,7 +62,7 @@
 				if ($_GET['view'] === 'p')
 				{
 					
-					foreach ($db->query("SELECT userid, name, popularity, date, message FROM public.post
+					foreach ($db->query("SELECT userid, name, public.post.id, popularity, date, message FROM public.post
 									JOIN public.user ON public.post.userid = public.user.id
 									ORDER BY popularity DESC") as $var)
 					{
