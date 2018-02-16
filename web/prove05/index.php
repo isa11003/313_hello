@@ -71,7 +71,7 @@
 					echo '<p>';
 					echo $var['message'] . '</p>';
 					
-					echo '<form method="post" action="index.php" target="_self">';
+					echo '<form method="post" action="index.php?view=p" target="_self">';
 					echo "<input type='hidden' name='postId' value='" . $var['id'] . "'>";
 					echo '<input type="submit" value="' . $var['popularity'] . '">';
 					echo '</form>';
