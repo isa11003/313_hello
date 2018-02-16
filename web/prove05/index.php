@@ -38,7 +38,7 @@
 			if(isSet($_POST['postId']))
 			{
 				$postId = $_POST['postId'];
-				$userId = $_POST['userId'];
+				$userId = $_SESSION['user'];
 				
 				$query = "INSERT INTO public.like (userid, postid) VALUES('$userId','$postId') ";
 				
@@ -91,11 +91,9 @@
 					
 					echo '<form method="post" action="index.php" target="_self">';
 					echo "<input type='hidden' name='postId' value='" . $var['id'] . "'>";
-					echo "<input type='hidden' name='userId' value='" . $var['userid'] . "'>";
 					echo '<input type="submit" value="' . $var['popularity'] . '">';
 					echo '</form>';
 					
-					//echo '<button class="right pop">'. $var['popularity'] . '</button>';
 					$date = substr($var['date'], 0, 10);
 					echo '<p class="right">';
 					echo date('F j, Y',strtotime($date));
