@@ -47,8 +47,8 @@ function validateCreateUser(){
 		alert("Passwords don't match");
 		return false;
 	}
-	else{
-	
+	else
+	{
 		passwordsMatch = true;
 	}
 	
