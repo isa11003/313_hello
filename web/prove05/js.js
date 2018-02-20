@@ -39,7 +39,7 @@ function validateCreateUser(){
 		hasPassword = true;
 	}
 	
-	if (password == passwordV)
+	if (password === passwordV)
 	{
 		passwordsMatch = true;
 	}
