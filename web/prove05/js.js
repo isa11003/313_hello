@@ -1,13 +1,16 @@
 function validateCreateUser(){
 	var scrname = document.getElementById('scrname').value;
 	var usrname = document.getElementById('usrname').value;
-	var password = document.getElementById('pass').value;
+	var pass = document.getElementById('pass').value;
 	var passwordV = document.getElementById('passV').value;
 
 	var hasScreenName = false;
 	var hasUserName = false;
 	var hasPassword = false;
 	var passwordsMatch = false;
+	
+	alert(pass);
+	alert(passwordV);
 	
 	if ( scrname == '')
 	{
@@ -29,7 +32,7 @@ function validateCreateUser(){
 		hasUserName = true;
 	}
 	
-	if ( password == '')
+	if ( pass == '')
 	{
 		alert("password required");
 		return false;
@@ -39,7 +42,7 @@ function validateCreateUser(){
 		hasPassword = true;
 	}
 	
-	if (password != passwordV)
+	if (pass != passwordV)
 	{	
 		alert("Passwords don't match");
 		return false;
