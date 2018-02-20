@@ -39,12 +39,14 @@ function validateCreateUser(){
 		hasPassword = true;
 	}
 	
-	if (password === passwordV)
-	{
-		passwordsMatch = true;
+	if (password != passwordV)
+	{	
+		alert("Passwords don't match");
+		return false;
 	}
 	else{
-		alert("passwords don't match");
+	
+		passwordsMatch = true;
 	}
 	
 	if ( hasPassword && hasScreenName && hasUserName && passwordsMatch)
