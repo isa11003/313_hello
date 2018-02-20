@@ -28,6 +28,8 @@
 			<br />
 			password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="pass" type="password" name="password">
 			<br />
+			password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="passV" type="password" name="passwordV">
+			<br />
 			<input type="submit" value="Create Account">
 		</form>
 	</body>
