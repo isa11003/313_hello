@@ -28,7 +28,7 @@
 		header("Location: index.php"); /* Redirect browser */
 	}
 	else{
-		header("Location: createUser.php?Error=1");
+		header("Location: createUser.php?error=1");
 	}
 		
 	
