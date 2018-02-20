@@ -28,7 +28,7 @@
 	
 	if ($user['username'] == $username)
 	{
-		if ($user['password'] == $password)
+		if (password_verify($password, $user['password']))
 		{
 			$_SESSION['user'] = $user['id'];
 			
@@ -43,7 +43,7 @@
 	}
 	else
 	{
-		header("Location: login.php?error=2"); /* Redirect browser */
+		header("Location: login.php?error=1"); /* Redirect browser */
 		die();
 	}
 	

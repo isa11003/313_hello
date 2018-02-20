@@ -21,7 +21,8 @@
 						
 	$statement->bindValue(':name', $name);
 	$statement->bindValue(':username', $username);
-	$statement->bindValue(':password', $password);
+	$hashedPass = password_hash($password, PASSWORD_DEFAULT);
+	$statement->bindValue(':password', $hashedPass);
 	
 	if ($statement->execute()){
 		$_SESSION['user'] = $db->lastInsertId('public.user_id_seq');		
