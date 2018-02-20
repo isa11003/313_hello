@@ -53,7 +53,7 @@ function validateCreateUser(){
 	}
 	
 	if ( hasPassword && hasScreenName && hasUserName && passwordsMatch)
-		return true;
+		return false;
 	else
 		return false;
 }
