@@ -5,12 +5,6 @@
 		echo '<a href="logout.php"><button>logout</button></a>';
 		echo '<a href="index.php"><button>View Recent</button></a>';
 		echo '<a href="index.php?view=p"><button>View Popular</button></a></div>';
-		//echo '<form method="get" action="index.php" target="_self">';
-		//echo '<input type="submit" value="viewRecent">';
-		//echo '</form>';
-		//echo '<form method="get" action="index.php?view=p" target="_self">';
-		//echo '<input type="submit" value="viewPopular">';
-		//echo '</form>';
 		
 	}
 	else if (basename ($_SERVER['PHP_SELF']) == "login.php" )

@@ -9,7 +9,18 @@
 			
 			session_start();
 			
+			
+			if (isSet($_GET['error']))
+			{
+				if ($_GET['error'] === '1')
+				{
+					echo '<h2 class="error">Username already exsists</h2>';
+				}
+			}
 		?>
+		
+		
+		
 		<form method="post" action="createAccount.php" target="_self" onsubmit="return validateCreateUser()">
 			screen name&nbsp;<input id="scrname" type="text" name="name">
 			<br />

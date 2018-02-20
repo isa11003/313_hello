@@ -23,10 +23,14 @@
 	$statement->bindValue(':username', $username);
 	$statement->bindValue(':password', $password);
 	
-	$statement->execute();
+	if ($statement->execute()){
+		$_SESSION['user'] = $db->lastInsertId('public.user_id_seq');		
+		header("Location: index.php"); /* Redirect browser */
+	}
+	else{
+		header("Location: createUser.php?Error=1");
+	}
+		
 	
-	$_SESSION['user'] = $db->lastInsertId('public.user_id_seq');
-				
-	header("Location: index.php"); /* Redirect browser */
 	
 ?>
