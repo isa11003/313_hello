@@ -25,24 +25,30 @@
 					{
 						$message = htmlspecialchars($_POST['post']);
 						
-						$query = "INSERT INTO public.post(userid, message) VALUES ('$loggedUser', :message)";
+						$query = "INSERT INTO public.post(userid, message) VALUES (:user, :message)";
 						$statement = $db->prepare($query);
 						
 						$statement->bindValue(':message', $message);
+						$statement->bindValue(':user', $loggedUser);
 						
 						$statement->execute();
 					}
 				}
 			}
 			
+			//set likes
 			if(isSet($_POST['postId']))
 			{
 				$postId = $_POST['postId'];
 				$userId = $_SESSION['user'];
 				
-				$query = "INSERT INTO public.like (userid, postid) VALUES('$userId','$postId') ";
+				$query = "INSERT INTO public.like (userid, postid) VALUES(:user,:post) ";
 				
 				$request = $db->prepare($query);
+				
+				
+				$statement->bindValue(':user', $userId);				
+				$statement->bindValue(':post', $postId);
 				
 				if ($request->execute())
 					$db->query("UPDATE public.post SET popularity = popularity + 1 WHERE id = '$postId'");
