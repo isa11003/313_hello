@@ -9,9 +9,6 @@ function validateCreateUser(){
 	var hasPassword = false;
 	var passwordsMatch = false;
 	
-	alert(pass);
-	alert(passwordV);
-	
 	if ( scrname == '')
 	{
 		alert("screen name required");
@@ -53,7 +50,7 @@ function validateCreateUser(){
 	}
 	
 	if ( hasPassword && hasScreenName && hasUserName && passwordsMatch)
-		return false;
+		return true;
 	else
 		return false;
 }
