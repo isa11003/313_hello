@@ -42,13 +42,13 @@
 				$postId = $_POST['postId'];
 				$userId = $_SESSION['user'];
 				
-				$query = "INSERT INTO public.like (userid, postid) VALUES(:user,:post) ";
+				$query = "INSERT INTO public.like (userid, postid) VALUES(:user,:post)";
 				
 				$request = $db->prepare($query);
 				
 				
-				$statement->bindValue(':user', $userId);				
-				$statement->bindValue(':post', $postId);
+				$request->bindValue(':user', $userId);				
+				$request->bindValue(':post', $postId);
 				
 				if ($request->execute())
 					$db->query("UPDATE public.post SET popularity = popularity + 1 WHERE id = '$postId'");
